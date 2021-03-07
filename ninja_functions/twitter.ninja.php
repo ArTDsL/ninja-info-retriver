@@ -27,7 +27,6 @@ ___________________________________
 */
 require_once(dirname(__FILE__).'/otherFunctions.ninja.php');
 class NinjaOnTwitter{
-	
 	public $profileName;
 	function spoof_start_twitter($profileName){
 		/* -- EXPLANATION --
@@ -38,15 +37,15 @@ class NinjaOnTwitter{
 		| the page in a temp file. Is there where we gonna       |
 		| search and retrive the info that we need.              |
 		|                                                        |
-        | Change Headers and Referer URL are critical for this,  |
-        | because before connect we need to Bypass CloudFlare    |
-        | protection.                                            |
+                | Change Headers and Referer URL are critical for this,  |
+                | because before connect we need to Bypass CloudFlare    |
+                | protection.                                            |
 		|________________________________________________________|
 		*/
 		$url = 'https://socialblade.com/twitter/user/'.$profileName;
 		$header[0] = "Accept-Language: en-us,en;q=0.5";
-	    $curl = curl_init();
-	    curl_setopt($curl, CURLOPT_URL, $url);
+	    	$curl = curl_init();
+	    	curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 5.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1');
 		curl_setopt($curl, CURLOPT_REFERER, 'http://www.google.com/');
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
