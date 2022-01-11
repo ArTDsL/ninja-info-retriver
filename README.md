@@ -1,4 +1,12 @@
 # NINJA INFO RETRIVER
+
+## WHY THIS REPO HAS BEEN ACHIVED?
+<hr>
+
+This repo has been achived: Discontinuation.
+
+<hr>
+
 Ninja Info Retriver is a PHP script made to fetch public information from a social media without using API.
 
 ## REQUISITES
